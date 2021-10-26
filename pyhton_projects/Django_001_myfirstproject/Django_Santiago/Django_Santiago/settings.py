@@ -75,14 +75,14 @@ WSGI_APPLICATION = 'Django_Santiago.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST':'12.4.5.5',
-        #env
+        'default':{
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
         'NAME':'superHeroDB',
-        'USER':'root',
+        'USER':'postgres',
         'PASSWORD':'',
-    }
+        'HOST':'localhost',
+        'PORT':'5432',
+   }
 }
 
 
