@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "cit_id": 2,
+    "uni_id": 3,
+    "name": "Giorno Giovanna ",
+    "path": null,
+    "description": "Giorno is a teenage boy of average height and slim yet muscular build, far smaller in stature than previous JoJos. He has golden hair of moderate length tied back in a short, braided tail, with three distinctive oversized curls arranged in a row over his forehead."
+  },
+  {
+    "id": 2,
+    "cit_id": 7,
+    "uni_id": 2,
+    "name": "Batman",
+    "path": null,
+    "description": "Batman is the superhero protector of Gotham City"
+  },
+  {
+    "id": 3,
+    "cit_id": 8,
+    "uni_id": 2,
+    "name": "Superman",
+    "path": null,
+    "description": "Superman is a superhero who first appeared in American comic books published by DC Comics. ... He was found and adopted by farmers Jonathan and Martha Kent"
+  },
+  {
+    "id": 4,
+    "cit_id": 3,
+    "uni_id": 3,
+    "name": "Muhammad Avdol",
+    "path": null,
+    "description": "Muhammad Avdol (モハメド・アヴドゥル"
+  },
+  {
+    "id": 7,
+    "cit_id": 4,
+    "uni_id": 1,
+    "name": "Eren Jaeger",
+    "path": "",
+    "description": "Personality. Eren expresses his desire to kill the Titans Eren was best described as hardheaded, strong-willed, passionate, and impulsive, which are attributes of both his strong determination to protect mankind and, eventually, his equally strong determination to escape the Walls"
+  }
+]

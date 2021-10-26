@@ -1,0 +1,22 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    flex-wrap:nowrap;
+}
+
+.lista{
+    display: flex;
+    background-color:#2C2F51; 
+    width: 500px;
+    min-height: 200px;
+    flex-direction: column;
+    
+}
+
+.caja{
+    height: 200px;
+    border: 1px;
+    margin: 1px;
+    background-color: #2C3F51;
+}

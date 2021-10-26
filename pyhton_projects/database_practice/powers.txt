@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "name": "Telekinesis"
+  },
+  {
+    "id": 2,
+    "name": "Magic"
+  },
+  {
+    "id": 3,
+    "name": "Cosmic Power"
+  },
+  {
+    "id": 4,
+    "name": "Heal factor"
+  },
+  {
+    "id": 5,
+    "name": "Telepathy"
+  },
+  {
+    "id": 6,
+    "name": "Cryokinesis"
+  },
+  {
+    "id": 7,
+    "name": "Return to zero"
+  },
+  {
+    "id": 8,
+    "name": "Attack titan"
+  },
+  {
+    "id": 9,
+    "name": "Crystallization"
+  },
+  {
+    "id": 10,
+    "name": "time stop"
+  },
+  {
+    "id": 11,
+    "name": "Fire Ability"
+  },
+  {
+    "id": 12,
+    "name": "volar"
+  },
+  {
+    "id": 13,
+    "name": "Velocity"
+  },
+  {
+      "id": 14,
+      "name": "Fly"
+  },
+  {
+      "id": 15,
+      "name": "Invisivility"
+  },
+  {
+      "id": 16,
+      "name": "SuperForce"
+  },
+  {
+      "id": 17,
+      "name": "Light Creations"
+  },
+  {
+      "id": 18,
+      "name": "Invulneravility"
+  },
+  {
+      "id": 19,
+      "name": "Change of form"
+  }
+]

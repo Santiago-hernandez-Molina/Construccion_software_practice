@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "pow_id": 17,
+    "cha_id": 1,
+    "level": 100
+  },
+  {
+    "id": 2,
+    "pow_id": 20,
+    "cha_id": 1,
+    "level": 100
+  },
+  {
+    "id": 3,
+    "pow_id": 29,
+    "cha_id": 1,
+    "level": 100
+  },
+  {
+    "id": 4,
+    "pow_id": 31,
+    "cha_id": 1,
+    "level": 100
+  },
+  {
+    "id": 5,
+    "pow_id": 29,
+    "cha_id": 3,
+    "level": 120
+  },
+  {
+    "id": 6,
+    "pow_id": 27,
+    "cha_id": 3,
+    "level": 70
+  },
+  {
+    "id": 7,
+    "pow_id": 24,
+    "cha_id": 4,
+    "level": 70
+  },
+  {
+    "id": 8,
+    "pow_id": 26,
+    "cha_id": 3,
+    "level": 50
+  }
+]
