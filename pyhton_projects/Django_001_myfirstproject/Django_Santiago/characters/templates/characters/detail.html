@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global-style.css'%}">
+</head>
+
+<body>
+
+    <header>
+        <form id="form">
+            <h1>Com<span class="red">ics</span></h1>
+            <label for="search"></label><input type="text" id="search" class="search" placeholder="Search" />
+        </form>
+    </header>
+
+    <main>
+        <div class="container-character">
+            <div class="character-info">
+                <div class="container-image">
+                    <img src="assets/img/wonder-woman.jpg" alt="Image not found" />
+                </div>
+                <div class="info text-white">
+                    <h1 class="text-white">Wonder Woman</h1>
+                    <hr />
+                    <div class="text-gray" id="description">
+                        <h3 class="text-white">Descripción</h3>
+                        <p class="text-gray">Wonder Woman ha sido miembro fundador de la Liga de la Justicia en casi todas las encarnaciones del Universo DC.</p>
+                    </div>
+                    <div id="powers">
+                        <h3 class="text-white">Poderes</h3>
+                        <ul class="text-gray">
+                            <li>Resistencia física</li>
+                            <li>Fuerza</li>
+                            <li>Agilidad</li>
+                        </ul>
+                    </div>
+
+                    <div id="additional-info">
+                        <div class="item-additional-info">
+                            <span class="text-bold text-white">Fecha de aparición: </span><span class="text-gray">12/03/2008</span><br />
+                        </div>
+                        <div class="item-additional-info">
+                            <span class="text-bold text-white">Ciudad: </span><span class="text-gray">New York</span><br />
+                        </div>
+                        <div class="item-additional-info">
+                            <span class="text-bold text-white">Universo cinematográfico: </span><span class="text-gray">Marvel</span><br />
+                        </div>
+                    </div>
+
+                    <div class="container-button">
+                        <a class="general-button" href="index.html">Inicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

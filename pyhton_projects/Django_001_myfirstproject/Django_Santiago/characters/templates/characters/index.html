@@ -1,0 +1,141 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global-style.css'%}">
+</head>
+
+<body>
+
+    <header>
+        <form id="form">
+            <h1>Com<span class="red">ics</span></h1>
+            <label for="search"></label><input type="text" id="search" class="search" placeholder="Search" />
+        </form>
+    </header>
+
+    <main>
+        <div class="container-universes">
+            <button class="button">Marvel</button>
+            <button class="button active">DC</button>
+            <button class="button">Anime</button>
+            <button class="button">Valiant</button>
+        </div>
+
+        <div class="container-items">
+            <div class="item">
+                <a href="character.html"><img src="assets/img/wonder-woman.jpg" alt="Image not found" /></a>
+                <div class="item-info">
+                    <h3>Wonder woman</h3>
+                    <span class="item-info">5.3</span>
+                </div>
+                <div class="overview">
+                    <h3>Descripción</h3>
+                    <p>Wonder Woman ha sido miembro fundador de la Liga de la Justicia en casi todas las encarnaciones del Universo DC.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="assets/img/thor.jpg" alt="Image not found" />
+                <div class="item-info">
+                    <h3>Thor</h3>
+                    <span class="item-info">5.3</span>
+                </div>
+                <div class="overview">
+                    <h3>Descripción</h3>
+                    <p>Thor ha demostrado en varias ocasiones que, cuando se trata de fuerza, es alguien con quien es mejor no meterse.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="assets/img/eternal-warrior.jpg" alt="Image not found" />
+                <div class="item-info">
+                    <h3>Eternal Warrior</h3>
+                    <span class="item-info">5.3</span>
+                </div>
+                <div class="overview">
+                    <h3>Descripción</h3>
+                    <p>Gilad Anni-Padda, el Eternal Warrior lleva vivo tanto tiempo como sus hermanos.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="assets/img/vision.jpg" alt="Image not found" />
+                <div class="item-info">
+                    <h3>Visión</h3>
+                    <span class="item-info">5.3</span>
+                </div>
+                <div class="overview">
+                    <h3>Descripción</h3>
+                    <p>Visión es la encarnación física de la inteligencia artificial JARVIS</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="assets/img/meliodas.jpg" alt="Image not found" />
+                <div class="item-info">
+                    <h3>Meliodas</h3>
+                    <span class="item-info">5.3</span>
+                </div>
+                <div class="overview">
+                    <h3>Descripción</h3>
+                    <p>Meliodas es el líder de los Siete Pecados Capitales.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="assets/img/superman.jpg" alt="Image not found" />
+                <div class="item-info">
+                    <h3>Superman</h3>
+                    <span class="item-info">5.3</span>
+                </div>
+                <div class="overview">
+                    <h3>Descripción</h3>
+                    <p>Superman nació en el planeta Krypton y recibió el nombre de Kal-El al nacer.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="assets/img/scorpio.jpg" alt="Image not found" />
+                <div class="item-info">
+                    <h3>Scorpio</h3>
+                    <span class="item-info">5.3</span>
+                </div>
+                <div class="overview">
+                    <h3>Descripción</h3>
+                    <p>Personaje del universo Valiant</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="assets/img/escanor.jpg" alt="Image not found" />
+                <div class="item-info">
+                    <h3>Escanor</h3>
+                    <span class="item-info">5.3</span>
+                </div>
+                <div class="overview">
+                    <h3>Descripción</h3>
+                    <p>Su Pecado es la Soberbia junto al símbolo del León </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__copy">
+            <div class="footer__content">
+                <div class="copy__text">
+                    © 2021 Jaider Pérez
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
