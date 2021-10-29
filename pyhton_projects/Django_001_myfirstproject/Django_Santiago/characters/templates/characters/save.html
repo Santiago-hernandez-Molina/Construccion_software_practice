@@ -11,6 +11,55 @@
 
 <body>
 
+    <header>
+        <form id="form">
+            <h1>Com<span class="red">ics</span></h1>
+            <label for="search"></label><input type="text" id="search" class="search" placeholder="Search" />
+        </form>
+    </header>
+
+    <main>
+
+        <div class="form-group">
+            <form action="{% url 'characters:save_characters'%}" method="post" enctype="multipart/form-data">
+                {% csrf_token%}
+                <label for="">Name</label>
+                <br>
+                <input name="name" type="text">
+                <br>
+                <label for="">Description</label>
+                <br>
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
+                <br>
+                <label for="">Image</label>
+                <input name="file" type="file">
+                <br>
+                <label for="">City_id</label>
+                <br>
+                <input name="city_id" type="int">
+                <br>
+                <label for="">Universe_id</label>
+                <br>
+                <input name="universe_id" type="int">
+
+
+
+                <button type="submit">Save Character</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__copy">
+            <div class="footer__content">
+                <div class="copy__text">
+                    © 2021 Jaider Pérez
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>

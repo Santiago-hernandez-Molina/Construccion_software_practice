@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'Django_Santiago.wsgi.application'
 DATABASES = {
         'default':{
         'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME':'superHeroDB',
+        'NAME':'superHeroDB2',
         'USER':'postgres',
         'PASSWORD':'',
         'HOST':'localhost',

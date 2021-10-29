@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+.form-group {
+    color: white;
+}
 
 :root {
     --primary-color: #0b0c2a;
@@ -7,7 +10,9 @@
     --btn-color: #d7d5d5;
 }
 
+
 /* Utilities */
+
 .text-white {
     color: #f4f4f4;
 }
@@ -59,7 +64,9 @@ header {
     background-color: var(--primary-color);
 }
 
+
 /* Characters section */
+
 .container-items {
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +92,6 @@ header {
     .item {
         width: 43%;
     }
-
     .search {
         width: 40%;
     }
@@ -95,7 +101,6 @@ header {
     .item {
         width: 28%;
     }
-
     .search {
         width: 30%;
     }
@@ -105,7 +110,6 @@ header {
     .item {
         width: 20%;
     }
-
     .search {
         width: 20%;
     }
@@ -135,7 +139,9 @@ span.red {
     color: var(--red-color);
 }
 
+
 /* Buttons universes */
+
 .container-universes {
     display: flex;
     flex-wrap: wrap;
@@ -171,7 +177,9 @@ span.red {
     color: #ffffff;
 }
 
+
 /* Overview home */
+
 .overview {
     background-color: #fff;
     padding: 2rem;
@@ -188,7 +196,9 @@ span.red {
     transform: translateY(0);
 }
 
+
 /* Character details */
+
 .container-character {
     display: flex;
     flex-wrap: wrap;
@@ -229,11 +239,9 @@ span.red {
     .container-character {
         margin: 0 10% 0 10%;
     }
-
     .container-image {
         width: 100%;
     }
-
     .info {
         width: 100%;
     }
@@ -243,11 +251,9 @@ span.red {
     .container-character {
         margin: 0 20% 0 20%;
     }
-
     .container-image {
         width: 100%;
     }
-
     .info {
         width: 100%;
     }
@@ -257,11 +263,9 @@ span.red {
     .container-character {
         margin: 0 25% 0 25%;
     }
-
     .container-image {
         width: 35%;
     }
-
     .info {
         width: 50%;
     }
@@ -295,7 +299,9 @@ span.red {
     color: var(--primary-color);
 }
 
+
 /* Footer */
+
 .footer__copy {
     text-align: center;
     font-size: 12px;
@@ -311,5 +317,3 @@ span.red {
     margin: 0 auto;
     padding: 0 15px;
 }
-
-
