@@ -6,8 +6,13 @@ from characters.models import Character
 
 
 def list(request):
-    list = Character.objects.all()
-    return render(request, 'characters/index.html', {"list": list})
+    querySet = request.GET.get("search")
+    if querySet:
+        list = Character.objects.all().filter(name=querySet)
+        return render(request, 'characters/index.html', {"list": list})
+    else:
+        list = Character.objects.all()
+        return render(request, 'characters/index.html', {"list": list})
 
 
 def save(request):

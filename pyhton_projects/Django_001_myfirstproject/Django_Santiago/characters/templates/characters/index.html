@@ -1,59 +1,54 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/global-style.css'%}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperHeroProject</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
 
 <body>
 
-    <header>
-        <form id="form">
-            <h1>Com<span class="red">ics</span></h1>
-            <label for="search"></label><input type="text" id="search" class="search" placeholder="Search" />
-        </form>
+    <header id="header_principal">
+        <div class="menu"><img src="{% static 'icons/menu.png'%}" alt="" id="logo"></div>
+        <div class="titulo">
+            <nav>
+                <ul>
+                    <li>Personajes</li>
+                    <li class="busqueda">
+                        <form action="{% url 'characters:list_characters'%}" method="get">
+                            <label for="search"></label><input type="text" class="search" name="search" placeholder="Buscar personaje" />
+                            <button type="submit"><img src="{% static 'icons/btn_buscar.png'%}"  alt="" id="btn_buscar"></button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="redes">
+            <img id="logo" src="{% static 'icons/fb_logo.png'%}" alt="">
+            <img id="logo" src="{% static 'icons/instagram_logo.png'%}" alt="">
+            <img src="{% static 'icons/telegram-plane.png'%}" alt="" id="logo">
+        </div>
     </header>
 
-    <main>
-        <div class="container-universes">
-            <button class="button">Marvel</button>
-            <button class="button active">DC</button>
-            <button class="button">Anime</button>
-            <button class="button">Valiant</button>
-        </div>
-
-        <div class="container-items">
-
-            {%for item in list %}
-            <div class="item">
-                <a href="detail"><img src="/media/{{item.path}}" alt="Image not found" /></a>
-                <div class="item-info">
-                    <h3>{{item.name}}</h3>
-                    <span class="item-info">5.3</span>
-                </div>
-                <div class="overview">
-                    <h3>Descripción</h3>
-                    <p>{{item.description}}</p>
-                </div>
+    <div class="content">
+        {%for item in list %}
+        <div class="item">
+            <div class="nombre_personaje">
+                <h3>{{item.name}}</h3>
             </div>
-            {%endfor%}
-        </div>
-
-    </main>
-
-    <footer class="footer">
-        <div class="footer__copy">
-            <div class="footer__content">
-                <div class="copy__text">
-                    © 2021 Jaider Pérez
-                </div>
+            <a href="detail"><img src="/media/{{item.path}}" alt="Image not found" id="img_content" /></a>
+            <div class="overview">
+                <p>{{item.description}}</p>
             </div>
         </div>
-    </footer>
+        {%endfor%}
+    </div>
+
+    <footer></footer>
 
 </body>
 

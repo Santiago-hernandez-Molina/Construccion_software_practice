@@ -5,59 +5,60 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/global-style.css'%}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperHeroProject</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
 
 <body>
-
-    <header>
-        <form id="form">
-            <h1>Com<span class="red">ics</span></h1>
-            <label for="search"></label><input type="text" id="search" class="search" placeholder="Search" />
-        </form>
+    <header id="header_principal">
+        <div class="menu"><img src="{% static 'icons/menu.png'%}" alt="" id="logo"></div>
+        <div class="titulo">
+            <nav>
+                <ul>
+                    <li>Personajes</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="redes">
+            <img id="logo" src="{% static 'icons/fb_logo.png'%}" alt="">
+            <img id="logo" src="{% static 'icons/instagram_logo.png'%}" alt="">
+            <img src="{% static 'icons/telegram-plane.png'%}" alt="" id="logo">
+        </div>
     </header>
 
-    <main>
-
-        <div class="form-group">
-            <form action="{% url 'characters:save_characters'%}" method="post" enctype="multipart/form-data">
-                {% csrf_token%}
-                <label for="">Name</label>
-                <br>
-                <input name="name" type="text">
-                <br>
-                <label for="">Description</label>
-                <br>
-                <textarea name="description" id="" cols="30" rows="10"></textarea>
-                <br>
-                <label for="">Image</label>
-                <input name="file" type="file">
-                <br>
-                <label for="">City_id</label>
-                <br>
-                <input name="city_id" type="int">
-                <br>
-                <label for="">Universe_id</label>
-                <br>
-                <input name="universe_id" type="int">
 
 
+    <div class="form-group">
+        <form action="{% url 'characters:save_characters'%}" method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            <label for="">Nombre del personaje</label>
+            <br>
+            <input name="name" type="text">
+            <br>
+            <label for="">Description</label>
+            <br>
+            <textarea name="description" id="" cols="30" rows="10"></textarea>
+            <br>
+            <label for="">Image</label>
+            <input name="file" type="file">
+            <br>
+            <label for="">City_id</label>
+            <br>
+            <input name="city_id" type="int">
+            <br>
+            <label for="">Universe_id</label>
+            <br>
+            <input name="universe_id" type="int">
 
-                <button type="submit">Save Character</button>
-            </form>
-        </div>
 
-    </main>
+            <button type="submit">Save Character</button>
+        </form>
+    </div>
+
 
     <footer class="footer">
-        <div class="footer__copy">
-            <div class="footer__content">
-                <div class="copy__text">
-                    © 2021 Jaider Pérez
-                </div>
-            </div>
-        </div>
     </footer>
 
 </body>

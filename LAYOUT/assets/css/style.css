@@ -10,14 +10,14 @@ nav {
 
 nav li {
     display: inline-flex;
-    font-family: Nanum Gothic, sans-serif;
-    font-size: 25px;
+    font-family: sans-serif;
+    font-size: 1em;
     margin-left: 25px;
 }
 
-nav li :hover {
-    color: #e68cb9;
+nav li:hover {
     cursor: pointer;
+    color: #e68cb9;
 }
 
 .logo {
