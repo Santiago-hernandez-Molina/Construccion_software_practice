@@ -11,44 +11,68 @@
 </head>
 
 <body>
-
-    <header id="header_principal">
-        <div class="menu"><img src="{% static 'icons/menu.png'%}" alt="" id="logo"></div>
-        <div class="titulo">
-            <nav>
-                <ul>
-                    <li>Personajes</li>
-                    <li class="busqueda">
-                        <form action="{% url 'characters:list_characters'%}" method="get">
-                            <label for="search"></label><input type="text" class="search" name="search" placeholder="Buscar personaje" />
-                            <button type="submit"><img src="{% static 'icons/btn_buscar.png'%}"  alt="" id="btn_buscar"></button>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="redes">
-            <img id="logo" src="{% static 'icons/fb_logo.png'%}" alt="">
-            <img id="logo" src="{% static 'icons/instagram_logo.png'%}" alt="">
-            <img src="{% static 'icons/telegram-plane.png'%}" alt="" id="logo">
-        </div>
-    </header>
-
-    <div class="content">
-        {%for item in list %}
-        <div class="item">
-            <div class="nombre_personaje">
-                <h3>{{item.name}}</h3>
+    <div class="principal">
+        <header class="menu">
+            <div class="opciones">
+                <div>
+                    <label for="btn_opciones">
+                    <img src="{% static 'icons/menu.png'%}" alt="" id="img_btn_opciones">
+                    <input id="btn_opciones" type="checkbox">
+                    </label>
+                </div>
+                <div id="home">
+                    <a href="{% url 'characters:list_characters'%}"><img src="{% static 'icons/Home_icon.png'%}" alt=""></a>
+                </div>
             </div>
-            <a href="detail"><img src="/media/{{item.path}}" alt="Image not found" id="img_content" /></a>
-            <div class="overview">
-                <p>{{item.description}}</p>
+
+            <form action="{% url 'characters:list_characters'%}" method="get">
+                <div class="busqueda">
+                    <div><input id="busqueda" type="text" name="search"></div>
+                    <div><button id="btn_buscar"><img src="{% static 'icons/btn_buscar.png'%}" alt=""></button></div>
+                </div>
+            </form>
+
+            <div class="redes">
+                <div class="item_redes">
+                    <a href=""><img src="{% static 'icons/fb_logo.png'%}" alt=""></a>
+                </div>
+                <div class="item_redes">
+                    <a href=""><img src="{% static 'icons/instagram_logo.png'%}" alt=""></a>
+                </div>
+                <div class="item_redes">
+                    <a href=""><img src="{% static 'icons/telegram-plane.png'%}" alt=""></a>
+                </div>
+
             </div>
+        </header>
+    </div>
+
+    <div class="universos">
+        {%for item in list2%}
+        <div class="universo_item">
+            <a href="{% url 'characters:filter_by_universe' item.id %}">{{item.name}}</a>
         </div>
         {%endfor%}
     </div>
+    <div class="content">
+        {%for item in list%}
+        <div class="personaje">
+            <a href="" id="link_pj">
+                <div>
+                    <header>{{item.name}}</header>
 
-    <footer></footer>
+                    <img src="/media/{{item.path}}" alt="">
+
+                    <p>{{item.description}}</p>
+                </div>
+            </a>
+        </div>
+        {% empty %}
+        <p>No se encontraron resultados </p>
+
+        {%endfor%}
+    </div>
+
 
 </body>
 

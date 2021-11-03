@@ -1,119 +1,3 @@
-body {
-    background: rgb(228, 228, 146);
-}
-
-#header_principal {
-    border-radius: 7px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    background-color: rgb(223, 135, 27);
-    flex-wrap: nowrap;
-}
-
-.titulo {
-    text-align: center;
-    font-family: AlfaSlabone;
-    font-size: 1.7em;
-}
-
-.titulo ul {
-    list-style: none;
-    font-weight: bold;
-}
-
-.busqueda {
-    display: flex;
-}
-
-.search {
-    max-width: 100%;
-    max-height: 25px;
-    border: 2px solid black;
-    border-radius: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
-    color: black;
-}
-
-#btn_buscar {
-    background: transparent;
-    padding: 0;
-    width: 20px;
-    height: 20px;
-}
-
-#btn_buscar:hover {
-    background: #b6570e;
-    border-radius: 50px;
-}
-
-button {
-    background: transparent;
-    border: none;
-}
-
-.redes {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#logo {
-    width: 40px;
-    height: 40px;
-    margin: 2px;
-}
-
-#logo:hover {
-    background: rgb(143, 80, 4);
-    border-radius: 50px;
-}
-
-.content {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 1.2fr 0.7fr 0.7fr 0.7fr;
-    grid-gap: 1%;
-}
-
-.item {
-    font-family: Domine;
-    font-size: 1em;
-    background: rgb(223, 135, 27);
-    border: 1px ridge black;
-}
-
-.item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 17px 0 #b6570e, 0 6px 20px 0 rgba(0, 0, 0, .19);
-}
-
-.nombre_personaje {
-    text-align: center;
-    display: block;
-    margin: auto;
-    width: 90%;
-    height: 45px;
-    object-fit: cover;
-}
-
-.overview {
-    margin: 5%;
-    font-size: 0.8em;
-    max-height: 150px;
-    max-width: 90%;
-    overflow: auto;
-}
-
-#img_content {
-    display: block;
-    margin: auto;
-    width: 92%;
-    height: 300px;
-    object-fit: cover;
-    border: 2px solid black;
-}
-
 @font-face {
     font-family: AlfaSlabone;
     src: url("../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf");
@@ -122,4 +6,195 @@ button {
 @font-face {
     font-family: Domine;
     src: url("../fonts/Domine/Domine-VariableFont_wght.ttf");
+}
+
+body {
+    background-image: url("../img/fondo_dr_stone.jpg");
+    background-size: 100%;
+    height: 900px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.principal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0 3px 3px 0 green;
+    z-index: 2020;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background: beige;
+    align-items: center;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 90px;
+}
+
+#btn_opciones {
+    display: none;
+}
+
+#img_btn_opciones:hover {
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 green;
+}
+
+#home:hover {
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 green;
+}
+
+.busqueda {
+    display: flex;
+    height: 30px;
+    box-shadow: 0 3px 3px 0 green;
+    border-radius: 10px;
+}
+
+#busqueda {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    height: 90%;
+}
+
+#btn_buscar {
+    background: transparent;
+    border: none;
+    height: 100%;
+    width: 30px;
+}
+
+#btn_buscar:hover {
+    background: green;
+    border-radius: 10px;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item_redes {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+}
+
+.universos {
+    margin-top: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: white;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: space-between;
+}
+
+.universo_item {
+    display: block;
+    text-align: center;
+    font-family: Domine;
+    padding: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    min-width: 19%;
+}
+
+.universo_item a:hover {
+    color: green;
+}
+
+.universo_item a {
+    text-decoration: none;
+    color: rgb(38, 65, 65);
+}
+
+.content {
+    margin-left: 10%;
+    margin-right: 10%;
+    background: rgba(0, 128, 68, 0.597);
+    margin-top: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.personaje {
+    text-decoration: none;
+    margin: 2%;
+    flex-basis: 25.3%;
+    height: 450px;
+    background: rgb(1, 116, 62);
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#link_pj {
+    text-decoration: none;
+}
+
+.personaje:hover {
+    scale: 1.02;
+    transition: 0.2ms;
+    box-shadow: 10px 10px 10px black;
+}
+
+.personaje header {
+    text-align: center;
+    font-family: AlfaSlabone;
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.personaje img {
+    display: block;
+    margin: auto;
+    width: 95%;
+    height: 270px;
+    object-fit: cover;
+    border: 1px solid white;
+}
+
+.personaje p {
+    text-align: justify;
+    font-family: Domine;
+    color: white;
+    margin: 5%;
+    font-size: 0.7em;
+    max-height: 100px;
+    max-width: 90%;
+    overflow: auto;
+}
+
+.form-group {
+    margin-top: 150px;
 }

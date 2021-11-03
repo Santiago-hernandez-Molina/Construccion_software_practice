@@ -6,32 +6,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/global-style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
 </head>
 
 <body>
-
-    <header>
-        <form id="form">
-            <h1>Com<span class="red">ics</span></h1>
-            <label for="search"></label><input type="text" id="search" class="search" placeholder="Search" />
-        </form>
-    </header>
-
-    <main>
-        <div class="container-character">
-            <div class="item">
-                <div class="nombre_personaje">
-                    <h3>{{character.name}}</h3>
-                </div>
-                <a href="detail"><img src="/media/{{item.path}}" alt="Image not found" id="img_content" /></a>
-                <div class="overview">
-                    <p>{{character.description}}</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
 </body>
 
 </html>

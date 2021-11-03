@@ -12,51 +12,79 @@
 </head>
 
 <body>
-    <header id="header_principal">
-        <div class="menu"><img src="{% static 'icons/menu.png'%}" alt="" id="logo"></div>
-        <div class="titulo">
-            <nav>
-                <ul>
-                    <li>Personajes</li>
-                </ul>
-            </nav>
-        </div>
-        <div class="redes">
-            <img id="logo" src="{% static 'icons/fb_logo.png'%}" alt="">
-            <img id="logo" src="{% static 'icons/instagram_logo.png'%}" alt="">
-            <img src="{% static 'icons/telegram-plane.png'%}" alt="" id="logo">
-        </div>
-    </header>
+    <div class="principal">
+        <header class="menu">
+            <div class="opciones">
+                <div>
+                    <label for="btn_opciones">
+                    <img src="{% static 'icons/menu.png'%}" alt="" id="img_btn_opciones">
+                    <input id="btn_opciones" type="checkbox">
+                    </label>
+                </div>
+                <div id="home">
+                    <a href="{% url 'characters:list_characters'%}"><img src="{% static 'icons/Home_icon.png'%}" alt=""></a>
+                </div>
+            </div>
 
+            <form action="{% url 'characters:list_characters'%}" method="get">
+                <div class="busqueda">
+                    <div><input id="busqueda" type="text" name="search"></div>
+                    <div><button id="btn_buscar"><img src="{% static 'icons/btn_buscar.png'%}" alt=""></button></div>
+                </div>
+            </form>
+
+            <div class="redes">
+                <div class="item_redes">
+                    <a href=""><img src="{% static 'icons/fb_logo.png'%}" alt=""></a>
+                </div>
+                <div class="item_redes">
+                    <a href=""><img src="{% static 'icons/instagram_logo.png'%}" alt=""></a>
+                </div>
+                <div class="item_redes">
+                    <a href=""><img src="{% static 'icons/telegram-plane.png'%}" alt=""></a>
+                </div>
+
+            </div>
+        </header>
+    </div>
 
 
     <div class="form-group">
-        <form action="{% url 'characters:save_characters'%}" method="post" enctype="multipart/form-data">
-            {% csrf_token%}
-            <label for="">Nombre del personaje</label>
-            <br>
-            <input name="name" type="text">
-            <br>
-            <label for="">Description</label>
-            <br>
-            <textarea name="description" id="" cols="30" rows="10"></textarea>
-            <br>
-            <label for="">Image</label>
-            <input name="file" type="file">
-            <br>
-            <label for="">City_id</label>
-            <br>
-            <input name="city_id" type="int">
-            <br>
-            <label for="">Universe_id</label>
-            <br>
-            <input name="universe_id" type="int">
+        <div class="content">
+            <form action="{% url 'characters:save_characters'%}" method="post" enctype="multipart/form-data">
+                {% csrf_token%}
+                <label for="">Nombre del personaje</label>
+                <br>
+                <input name="name" type="text">
+                <br>
+                <label for="">Description</label>
+                <br>
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
+                <br>
+                <label for="">Image</label>
+                <input name="file" type="file">
+                <br>
+                <label for="">Universe</label>
+                <br>
+                <select name="universe_id">
+                {%for item in list %}
+                <option value="{{item.id}}">{{item.name}}</option> 
+                {%endfor%}
+             </select>
+                <br>
+                <select name="city_id">
+                {%for item in list2 %}
+                <option value="{{item.id}}">{{item.name}}</option> 
+                {%endfor%}
+             </select>
+                <br>
 
 
-            <button type="submit">Save Character</button>
-        </form>
+                <button type="submit">Save Character</button>
+            </form>
+
+        </div>
     </div>
-
 
     <footer class="footer">
     </footer>
