@@ -1,0 +1,32 @@
+.description {
+    display: block;
+    align-content: flex-start;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.description p {
+    font-size: 2.3rem;
+    color: #33373a;
+    font-family: SspL;
+}
+
+.description_video {
+    width: 720px;
+    height: 480px;
+    border-radius: 20px;
+    background: beige;
+}
+
+.caseStudies {
+    margin-top: 100px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.case {
+    height: 100%;
+    position: static;
+}

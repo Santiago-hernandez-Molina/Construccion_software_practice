@@ -1,0 +1,26 @@
+{% extends 'solutions/masterTemplate.html' %} {% load static%} {% block body %}
+<div class="content">
+    <div class="description">
+        <header class="titulo">
+            <h1>Our solutions for {{item.name}}</h1>
+        </header>
+
+        <p>{{item.description}}</p>
+        <br>
+        <div class="description_video">
+            <img src="/media/{{item.video}}"></img>
+        </div>
+    </div>
+    <div class="caseStudies">
+        {% for case in list %}
+        <a href="">
+            <div class="case">
+                <img src="/media/{{case.path}}" alt="">
+            </div>
+        </a>
+
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

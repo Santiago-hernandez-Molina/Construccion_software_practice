@@ -1,0 +1,16 @@
+{%extends 'characters/masterTemplate.html' %} {%block body%} {%for item in list%}
+<div class="personaje">
+    <a href="" id="link_pj">
+        <div>
+            <header>{{item.name}}</header>
+
+            <img src="/media/{{item.path}}" alt="">
+
+            <p>{{item.description}}</p>
+        </div>
+    </a>
+</div>
+{% empty %}
+<p>No se encontraron resultados </p>
+
+{%endfor%} {%endblock%}

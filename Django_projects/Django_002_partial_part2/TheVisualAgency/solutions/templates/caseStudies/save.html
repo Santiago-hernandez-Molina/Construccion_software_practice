@@ -1,0 +1,36 @@
+{%extends 'solutions/masterTemplate.html' %} {%block body%}
+
+<div class="content">
+    <form action="{% url 'solutions:saveCategory'%}" method="post" enctype="multipart/form-data">
+        {% csrf_token%}
+        <label for="">Name</label>
+        <br>
+        <input name="name" type="text">
+        <br>
+        <label for="">Project objective</label>
+        <br>
+        <textarea name="projectObjective" id="" cols="30" rows="10"></textarea>
+        <br>
+        <label for="">Client benefit</label>
+        <br>
+        <textarea name="clientBenefit" id="" cols="30" rows="10"></textarea>
+        <br>
+        <label for="">Project result</label>
+        <br>
+        <textarea name="projectResult" id="" cols="30" rows="10"></textarea>
+        <br>
+        <label for="">Project background</label>
+        <br>
+        <textarea name="projectBackground" id="" cols="30" rows="10"></textarea>
+        <br>
+        <label for="">Video</label>
+        <input name="file" type="file">
+        <br>
+
+
+        <button type="submit">Save</button>
+    </form>
+
+
+</div>
+{%endblock%}

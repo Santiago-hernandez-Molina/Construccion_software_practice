@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style_detail.css'%}">
+    <title>{% if item.name %}{{item.name}}{% else %}The Visual Agency{% endif %}</title>
+</head>
+
+<body>
+    <header>
+        <nav class="busqueda">
+            <div class="logo">
+                <a href="{% url 'solutions:list' %}"><img src={%static 'icons/logo.png'%} alt=""></a>
+            </div>
+            <div class="opciones">
+                <ul>
+                    <li>About <img id="flecha" src="{%static 'icons/flecha.png'%}" alt=""><span>\</span>
+                    </li>
+                    <li>Solutions<img id="flecha" src="{%static 'icons/flecha.png'%}" alt=""><span>\</span></li>
+                    <li>Works<span>\</span></li>
+                    <li>Clients</li>
+                    <li>Blog<span>\</span></li>
+                    <li>Contacts<img id="flecha" src="{%static 'icons/flecha.png'%}" alt=""><span>\</span></li>
+                    <li>En<img id="flecha" src="{%static 'icons/flecha.png'%}" alt=""><span>\</span></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    {% block body %}{% endblock body %}
+
+    <footer>
+        <div id="item_footer1">
+            <header>The Visual Agency S.r.l.
+            </header>
+            <p>
+                Via Panizza 7, 20144 Milan – Italy info@thevisualagency.com T +39 02 4678631</p>
+        </div>
+        <div></div>
+        <div id="item_footer2">
+            <div id="btn_view">Newsletter</div>
+        </div>
+        <div id="item_footer1">
+            <p>
+                <strong> Download</strong></p>
+        </div>
+        <div></div>
+        <div></div>
+        <div id="item_footer1">
+            <p>
+                <strong>© 2021 The Visual Agency S.r.l - P.IVA 07603350963 Codice SDI M5UXCR1 - Privacy Policy <br><strong> (parcial realizado por Santiago Hernandez)</strong></strong>
+            </p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{% extends 'solutions/masterTemplate.html' %} {% load static%} {% block body %}
+
+<div class="content">
+    <header class="titulo">
+        <h1>The Visual Agency is a data and <br> information visualization company</h1>
+    </header>
+    <p>We use powerful designs to turn complex data and information into <strong>meaningful</strong> communications and
+        <strong> memorable </strong>stories.</p>
+
+    <div class="video">
+        <video src="{%static 'videos/homura.mp4'%}" controls></video>
+    </div>
+    <div class="options2">
+        {% for item in list %}
+        <a href="{% url 'solutions:detail_category' item.id %}" class="item">
+            <div>{{item.name}}</div>
+        </a>
+        {% endfor %}
+    </div>
+
+    <div class="texto_final">
+        <p>
+            We enhance our clients' business and marketing strategies by helping them engage with and communicate their data. The Visual Agency's groundbreaking designs captivate, educate and inspire audiences, creating customer value.
+        </p>
+    </div>
+    <div class="companies">
+        <img src="{%static 'img/clients.png'%}" alt="">
+    </div>
+    <div class="full_info">
+        <div id="btn_view">View full list of clients</div>
+    </div>
+
+    <div class="contact">
+        <p> Get in touch for more information</p>
+    </div>
+    <div class="contact">
+        <div id="btn_view">Contact us</div>
+    </div>
+</div>
+{% endblock body %}

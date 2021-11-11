@@ -1,0 +1,38 @@
+{%extends 'characters/masterTemplate.html' %} {%block body%}
+
+<div class="content">
+    <form action="{% url 'characters:save_characters'%}" method="post" enctype="multipart/form-data">
+        {% csrf_token%}
+        <label for="">Nombre del personaje</label>
+        <br>
+        <input name="name" type="text">
+        <br>
+        <label for="">Description</label>
+        <br>
+        <textarea name="description" id="" cols="30" rows="10"></textarea>
+        <br>
+        <label for="">Image</label>
+        <input name="file" type="file">
+        <br>
+        <label for="">Universe</label>
+        <br>
+        <select name="universe_id">
+                {%for item in list %}
+                <option value="{{item.id}}">{{item.name}}</option> 
+                {%endfor%}
+             </select>
+        <br>
+        <select name="city_id">
+                {%for item in list2 %}
+                <option value="{{item.id}}">{{item.name}}</option> 
+                {%endfor%}
+             </select>
+        <br>
+
+
+        <button type="submit">Save Character</button>
+    </form>
+
+
+</div>
+{%endblock%}
