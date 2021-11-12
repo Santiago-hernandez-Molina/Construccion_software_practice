@@ -68,6 +68,7 @@ img {
     align-content: center;
     text-align: center;
     margin-top: 150px;
+    background: white;
 }
 
 .content header {
@@ -190,7 +191,8 @@ footer {
 
 .video video {
     width: 720px;
-    height: 480px;
+    height: 100%;
     border-radius: 20px;
-    background: beige;
+    object-fit: cover;
+    border-radius: 20px
 }
